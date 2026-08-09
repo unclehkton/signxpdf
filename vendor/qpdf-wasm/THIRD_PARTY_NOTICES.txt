@@ -1,0 +1,780 @@
+THIRD-PARTY NOTICES for the QPDF WebAssembly build used by Sign X PDF
+================================================================================
+
+This directory vendors a reproducible build recipe that produces static/qpdf/qpdf.js
+and static/qpdf/qpdf.wasm. The runtime artefacts bundle QPDF and the static
+dependencies listed below. Exact source revisions are pinned in README.md and
+vendor/qpdf-wasm/build.mjs.
+
+
+================================================================================
+1. QPDF
+================================================================================
+Project: https://github.com/qpdf/qpdf
+Pinned commit: 856d32c610334855d30e96d25eb5f9636fb62f08
+Version: 12.2.0
+License: Apache License 2.0
+
+NOTICE:
+qpdf is copyright (c) 2005-2021 Jay Berkenbilt, 2022-2025 Jay Berkenbilt and Manfred Holger
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+Versions of qpdf prior to version 7 were released under the terms of version 2.0 of the Artistic License. At your option, you may continue to consider qpdf to be licensed under those terms. Please see the manual for additional information.
+
+The qpdf distribution includes a copy of [qtest](https://qtest.sourceforge.io), which is released under the terms of the [version 2.0 of the Artistic license](https://opensource.org/licenses/Artistic-2.0), which can be found at https://opensource.org/licenses/Artistic-2.0.
+
+The Rijndael encryption implementation used as the basis for AES encryption and decryption support comes from Philip J. Erdelsky's public domain implementation.  The files `libqpdf/rijndael.cc` and `libqpdf/qpdf/rijndael.h` remain in the public domain.  They were obtained from
+* http://www.efgh.com/software/rijndael.htm
+* http://www.efgh.com/software/rijndael.txt
+
+The embedded sha2 code comes from sphlib 3.0
+* http://www.saphir2.com/sphlib/
+
+That code has the following license:
+  ```
+  Copyright (c) 2007-2011  Projet RNRT SAPHIR
+
+  Permission is hereby granted, free of charge, to any person obtaining
+  a copy of this software and associated documentation files (the
+  "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish,
+  distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to do so, subject to
+  the following conditions:
+
+  The above copyright notice and this permission notice shall be included
+  in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  ```
+
+
+LICENSE:
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+================================================================================
+2. zlib
+================================================================================
+Project: https://github.com/madler/zlib
+Pinned commit: 51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf
+Version: 1.3.1 (as reported by the built package)
+License: zlib License
+
+Copyright notice:
+
+ (C) 1995-2024 Jean-loup Gailly and Mark Adler
+
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. …10471 tokens truncated…      break;
+      }
+      await new Promise((resolve) => setTimeout(resolve, 250));
+    }
+
+    try {
+      socket.close();
+    } catch {
+      // ignore close races while Chrome is shutting down
+    }
+
+    const smokeEnvelope = smokeState?.payload;
+    const passed =
+      smokeState?.title === "QPDF_SMOKE_PASS" ||
+      smokeEnvelope?.ok === true ||
+      String(smokeState?.text || "").startsWith("QPDF_SMOKE_PASS ");
+    if (!passed) {
+      throw new Error(
+        `Chromium worker smoke did not pass.\nSTATE:\n${JSON.stringify(smokeState, null, 2)}\nSTDERR:\n${browserStderr}`,
+      );
+    }
+
+    const unexpectedPaths = requestPaths.filter(
+      (requestPath) => !expectedPaths.has(requestPath),
+    );
+    if (unexpectedPaths.length > 0) {
+      throw new Error(`Chromium requested unexpected local paths: ${unexpectedPaths.join(", ")}`);
+    }
+
+    let proof = smokeEnvelope?.payload;
+    if (!proof || typeof proof !== "object" || !("qpdfVersion" in proof)) {
+      const passMatch = String(smokeState?.text || "").match(
+        /QPDF_SMOKE_PASS ([A-Za-z0-9+/=]+)/,
+      );
+      if (!passMatch) {
+        throw new Error(`Missing smoke proof payload: ${JSON.stringify(smokeState)}`);
+      }
+      proof = JSON.parse(Buffer.from(passMatch[1], "base64").toString("utf8"));
+    }
+
+    console.log("QPDF Chromium worker proof:");
+    console.log(JSON.stringify({ ...proof, localRequestPaths: requestPaths }, null, 2));
+    return proof;
+  } finally {
+    if (browserProcess && !browserProcess.killed) {
+      browserProcess.kill();
+      await new Promise((resolve) => {
+        browserProcess.once("exit", resolve);
+        setTimeout(resolve, 2000);
+      });
+    }
+    await new Promise((resolve) => server.close(resolve));
+    await rm(browserProfile, { recursive: true, force: true }).catch(() => {});
+  }
+}
+
+async function sha256(filePath) {
+  const hash = createHash("sha256");
+  for await (const chunk of createReadStream(filePath)) {
+    hash.update(chunk);
+  }
+  return hash.digest("hex");
+}
+
+async function describeArtifacts(assetDirectory) {
+  const files = await readdir(assetDirectory);
+  const expected = ["qpdf.js", "qpdf.wasm"];
+  if (files.sort().join(",") !== expected.join(",")) {
+    throw new Error(`Expected only ${expected.join(", ")}, found ${files.join(", ")}`);
+  }
+
+  const descriptions = [];
+  for (const file of expected) {
+    const filePath = path.join(assetDirectory, file);
+    const details = await stat(filePath);
+    descriptions.push({
+      file,
+      bytes: details.size,
+      sha256: await sha256(filePath),
+    });
+  }
+  return descriptions;
+}
+
+function requireNativeEmscripten() {
+  const emConfig = process.env.EM_CONFIG;
+  if (!emConfig) {
+    throw new Error(
+      "EM_CONFIG is required. Set it to the Emscripten 3.1.73 .emscripten file before building.",
+    );
+  }
+
+  const emsdkRoot = path.dirname(path.resolve(emConfig));
+  const emscriptenRoot = path.join(emsdkRoot, "upstream", "emscripten");
+  return {
+    emConfig: path.resolve(emConfig),
+    emar: path.join(emscriptenRoot, "emar.bat"),
+    emcc: path.join(emscriptenRoot, "emcc.bat"),
+    emcmake: path.join(emscriptenRoot, "emcmake.bat"),
+    emconfigure: path.join(emscriptenRoot, "emconfigure.bat"),
+    emmake: path.join(emscriptenRoot, "emmake.bat"),
+    emranlib: path.join(emscriptenRoot, "emranlib.bat"),
+    emxx: path.join(emscriptenRoot, "em++.bat"),
+  };
+}
+
+async function assertToolchain(toolchain) {
+  await access(toolchain.emConfig);
+  await access(toolchain.emar);
+  await access(toolchain.emcc);
+  await access(toolchain.emcmake);
+  await access(toolchain.emconfigure);
+  await access(toolchain.emmake);
+  await access(toolchain.emranlib);
+  await access(toolchain.emxx);
+  const { stdout, stderr } = await capture(toolchain.emxx, ["--version"], {
+    env: { ...process.env, EM_CONFIG: toolchain.emConfig },
+  });
+  const versionText = `${stdout}\n${stderr}`;
+  if (!versionText.includes(`emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) ${EMSCRIPTEN_VERSION}`)) {
+    throw new Error(`Expected Emscripten ${EMSCRIPTEN_VERSION}, received:\n${versionText}`);
+  }
+}
+
+function gitInCheckout(destination, args) {
+  const safeDirectory = destination.replaceAll("\\", "/");
+  return ["-c", `safe.directory=${safeDirectory}`, "-C", destination, ...args];
+}
+
+async function assertExactCheckout(destination, name, revision, env) {
+  await access(path.join(destination, ".git"));
+  const { stdout } = await capture("git", gitInCheckout(destination, ["rev-parse", "HEAD"]), {
+    env,
+  });
+  if (stdout.trim() !== revision) {
+    throw new Error(`${name} resolved to ${stdout.trim()}, expected ${revision}`);
+  }
+}
+
+async function cloneExact(sourceRoot, name, repository, revision, env) {
+  const destination = path.join(sourceRoot, name);
+  await run("git", ["init", destination], { env });
+  await run("git", ["-C", destination, "fetch", "--depth=1", "--no-tags", repository, revision], {
+    env,
+  });
+  await run("git", ["-C", destination, "checkout", "--detach", "FETCH_HEAD"], { env });
+  await assertExactCheckout(destination, name, revision, env);
+}
+
+/**
+ * Stage only the static libjpeg artefacts QPDF needs.
+ *
+ * Full `cmake --build` + `cmake --install` for libjpeg-turbo under Windows
+ * Emscripten also builds/installs WASM CLI tools (cjpeg/djpeg/jpegtran/…).
+ * Those LTO-linked programs are unnecessary for QPDF and were the observed
+ * install-stage hang / incomplete-output failure mode: libjpeg.a exists in
+ * the build tree while the install prefix never receives headers or the lib.
+ */
+async function stageLibjpegInstall(source, buildDirectory, installRoot) {
+  const includeDir = path.join(installRoot, "include");
+  const libDir = path.join(installRoot, "lib");
+  const pkgConfigDir = path.join(libDir, "pkgconfig");
+  await mkdir(includeDir, { recursive: true });
+  await mkdir(pkgConfigDir, { recursive: true });
+
+  const librarySource = path.join(buildDirectory, "libjpeg.a");
+  await access(librarySource);
+  await copyFile(librarySource, path.join(libDir, "libjpeg.a"));
+
+  const headers = [
+    [path.join(buildDirectory, "jconfig.h"), "jconfig.h"],
+    [path.join(source, "src", "jerror.h"), "jerror.h"],
+    [path.join(source, "src", "jmorecfg.h"), "jmorecfg.h"],
+    [path.join(source, "src", "jpeglib.h"), "jpeglib.h"],
+  ];
+  for (const [from, name] of headers) {
+    await access(from);
+    await copyFile(from, path.join(includeDir, name));
+  }
+
+  const pkgConfigSource = path.join(buildDirectory, "pkgscripts", "libjpeg.pc");
+  await access(pkgConfigSource);
+  await copyFile(pkgConfigSource, path.join(pkgConfigDir, "libjpeg.pc"));
+
+  await access(path.join(libDir, "libjpeg.a"));
+  await access(path.join(includeDir, "jpeglib.h"));
+  console.log(
+    `[qpdf-wasm] staged libjpeg-static -> ${path.join(libDir, "libjpeg.a")} + headers/pkg-config`,
+  );
+}
+
+async function buildAndStageLibjpeg(toolchain, source, buildDirectory, installRoot, options, env) {
+  await stage("configure libjpeg-turbo", () =>
+    run(
+      toolchain.emcmake,
+      [
+        "cmake",
+        "-S",
+        source,
+        "-B",
+        buildDirectory,
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        ...options,
+      ],
+      { env },
+    ),
+  );
+
+  // Only the static library is required. Skipping CLI tool targets avoids the
+  // Windows Emscripten LTO hang / missing-program install failure.
+  await stage("build libjpeg-static only", () =>
+    run("cmake", ["--build", buildDirectory, "--target", "jpeg-static", "--parallel", "5"], {
+      env,
+    }),
+  );
+
+  await stage("stage libjpeg headers and static library", () =>
+    stageLibjpegInstall(source, buildDirectory, installRoot),
+  );
+}
+
+async function assertNativeCrypto(qpdfBuildDirectory) {
+  const configPath = path.join(qpdfBuildDirectory, "libqpdf", "qpdf", "qpdf-config.h");
+  const config = await readFile(configPath, "utf8");
+  const required = ['#define DEFAULT_CRYPTO "native"', "#define USE_CRYPTO_NATIVE 1"];
+  for (const line of required) {
+    if (!config.includes(line)) {
+      throw new Error(`QPDF native crypto assertion missing from ${configPath}: ${line}`);
+    }
+  }
+  if (/^#define USE_CRYPTO_(GNUTLS|OPENSSL) 1$/m.test(config)) {
+    throw new Error(`QPDF enabled a forbidden external crypto provider in ${configPath}`);
+  }
+}
+
+async function buildNativeArtifacts(toolchain, artifactDirectory, { resume = false } = {}) {
+  const sourceRoot = path.join(workspace, "src");
+  const buildRoot = path.join(workspace, "build");
+  const installRoot = path.join(workspace, "install");
+  const cflags = "-Oz -flto -msimd128";
+  const env = {
+    ...process.env,
+    EM_CONFIG: toolchain.emConfig,
+    CFLAGS: cflags,
+    CXXFLAGS: cflags,
+    NINJA_STATUS: "[qpdf-wasm %f/%t %es] ",
+  };
+
+  await mkdir(sourceRoot, { recursive: true });
+  await mkdir(buildRoot, { recursive: true });
+  await mkdir(installRoot, { recursive: true });
+
+  const zlibSource = path.join(sourceRoot, "zlib");
+  const libjpegSource = path.join(sourceRoot, "libjpeg-turbo");
+  const libjpegBuildDirectory = path.join(buildRoot, "libjpeg-turbo");
+
+  if (resume) {
+    await stage("verify interrupted-build cache", async () => {
+      await Promise.all([
+        assertExactCheckout(zlibSource, "zlib", SOURCE_REVISIONS.zlib, env),
+        assertExactCheckout(
+          libjpegSource,
+          "libjpeg-turbo",
+          SOURCE_REVISIONS.libjpegTurbo,
+          env,
+        ),
+        assertExactCheckout(path.join(sourceRoot, "qpdf"), "qpdf", SOURCE_REVISIONS.qpdf, env),
+        access(path.join(installRoot, "lib", "libz.a")),
+      ]);
+
+      // Prefer an already-staged install; otherwise recover from a build-tree
+      // that produced libjpeg.a before cmake --install stalled.
+      try {
+        await access(path.join(installRoot, "lib", "libjpeg.a"));
+        await access(path.join(installRoot, "include", "jpeglib.h"));
+      } catch {
+        await stage("recover libjpeg install from build tree", () =>
+          stageLibjpegInstall(libjpegSource, libjpegBuildDirectory, installRoot),
+        );
+      }
+    });
+  } else {
+    await stage("fetch exact source revisions", async () => {
+      await Promise.all([
+        cloneExact(sourceRoot, "zlib", SOURCE_REPOSITORIES.zlib, SOURCE_REVISIONS.zlib, env),
+        cloneExact(
+          sourceRoot,
+          "libjpeg-turbo",
+          SOURCE_REPOSITORIES.libjpegTurbo,
+          SOURCE_REVISIONS.libjpegTurbo,
+          env,
+        ),
+        cloneExact(sourceRoot, "qpdf", SOURCE_REPOSITORIES.qpdf, SOURCE_REVISIONS.qpdf, env),
+      ]);
+    });
+
+    await stage("configure zlib", async () => {
+      await run(
+        toolchain.emconfigure,
+        ["sh", "configure", `--prefix=${installRoot.replaceAll("\\", "/")}`, "--static"],
+        { cwd: zlibSource, env },
+      );
+      const zlibMakefilePath = path.join(zlibSource, "Makefile");
+      let zlibMakefile = await readFile(zlibMakefilePath, "utf8");
+      for (const [variable, executable] of [
+        ["CC", toolchain.emcc],
+        ["LDSHARED", toolchain.emcc],
+        ["AR", toolchain.emar],
+        ["RANLIB", toolchain.emranlib],
+      ]) {
+        zlibMakefile = zlibMakefile.replace(
+          new RegExp(`^${variable}=.*$`, "m"),
+          `${variable}=${executable.replaceAll("\\", "/")}`,
+        );
+      }
+      await writeFile(zlibMakefilePath, zlibMakefile, "utf8");
+    });
+    await stage("build and install zlib", () =>
+      run(toolchain.emmake, ["make", "-j5", "install"], { cwd: zlibSource, env }),
+    );
+    await buildAndStageLibjpeg(
+      toolchain,
+      libjpegSource,
+      libjpegBuildDirectory,
+      installRoot,
+      [
+        `-DCMAKE_INSTALL_PREFIX=${installRoot}`,
+        "-DENABLE_SHARED=OFF",
+        "-DENABLE_STATIC=ON",
+        "-DWITH_SIMD=OFF",
+        "-DWITH_TURBOJPEG=OFF",
+        `-DCMAKE_C_FLAGS=${cflags}`,
+      ],
+      env,
+    );
+  }
+
+  const qpdfBuildDirectory = path.join(buildRoot, "qpdf");
+  await stage("configure QPDF with native crypto", () =>
+    run(
+      toolchain.emcmake,
+      [
+        "cmake",
+        "-S",
+        path.join(sourceRoot, "qpdf"),
+        "-B",
+        qpdfBuildDirectory,
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        `-DCMAKE_INSTALL_PREFIX=${installRoot}`,
+        `-DCMAKE_PREFIX_PATH=${installRoot}`,
+        `-DCMAKE_INCLUDE_PATH=${path.join(installRoot, "include")}`,
+        `-DCMAKE_LIBRARY_PATH=${path.join(installRoot, "lib")}`,
+        `-DCMAKE_C_FLAGS=${cflags}`,
+        `-DCMAKE_CXX_FLAGS=${cflags}`,
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_SHARED_LIBS=OFF",
+        "-DBUILD_STATIC_LIBS=ON",
+        "-DDEFAULT_CRYPTO=native",
+        "-DGENERATE_AUTO_JOB=OFF",
+        "-DINSTALL_EXAMPLES=OFF",
+        "-DRANDOM_DEVICE=/dev/random",
+        "-DREQUIRE_CRYPTO_NATIVE=ON",
+        "-DUSE_IMPLICIT_CRYPTO=OFF",
+      ],
+      { env },
+    ),
+  );
+  await stage("build QPDF static library", () =>
+    run("cmake", ["--build", qpdfBuildDirectory, "--target", "libqpdf", "--parallel", "5"], {
+      env,
+    }),
+  );
+  await stage("assert native-only QPDF crypto configuration", () =>
+    assertNativeCrypto(qpdfBuildDirectory),
+  );
+
+  await writeFile(path.join(workspace, "pre.js"), preJs, "utf8");
+  await writeFile(path.join(workspace, "post.js"), postJs, "utf8");
+  await stage("link QPDF worker module", () =>
+    run(
+      toolchain.emxx,
+      [
+        ...cflags.split(" "),
+        `-I${path.join(installRoot, "include")}`,
+        `-I${path.join(sourceRoot, "qpdf", "include")}`,
+        `-I${path.join(qpdfBuildDirectory, "libqpdf")}`,
+        `-L${path.join(installRoot, "lib")}`,
+        "--pre-js",
+        path.join(workspace, "pre.js"),
+        "--post-js",
+        path.join(workspace, "post.js"),
+        "-sALLOW_MEMORY_GROWTH=1",
+        "-sDYNAMIC_EXECUTION=0",
+        "-sEMIT_EMSCRIPTEN_LICENSE=1",
+        "-sENVIRONMENT=worker",
+        "-sEXPORTED_FUNCTIONS=[_main]",
+        "-sEXPORTED_RUNTIME_METHODS=[callMain,FS,WORKERFS]",
+        "-sEXPORT_ES6=1",
+        "-sEXPORT_NAME=createQpdfModule",
+        "-sINITIAL_MEMORY=67108864",
+        "-sINCOMING_MODULE_JS_API=[locateFile,thisProgram,noExitRuntime,noInitialRun,onExit,print,printErr,quit]",
+        "-sMODULARIZE=1",
+        "-sNO_DISABLE_EXCEPTION_CATCHING=1",
+        "-sSTACK_SIZE=1MB",
+        "-sUSE_ES6_IMPORT_META=0",
+        "-lworkerfs.js",
+        "-o",
+        path.join(artifactDirectory, "qpdf.js"),
+        path.join(sourceRoot, "qpdf", "qpdf", "qpdf.cc"),
+        path.join(qpdfBuildDirectory, "libqpdf", "libqpdf.a"),
+        "-ljpeg",
+        "-lz",
+      ],
+      { env },
+    ),
+  );
+}
+
+async function build({ resume = false } = {}) {
+  const artifactDirectory = path.join(workspace, "artifacts");
+  const toolchain = requireNativeEmscripten();
+
+  await stage("verify native Emscripten toolchain", () => assertToolchain(toolchain));
+  if (resume) {
+    await rm(artifactDirectory, { recursive: true, force: true });
+  } else {
+    await rm(workspace, { recursive: true, force: true });
+  }
+  await mkdir(artifactDirectory, { recursive: true });
+
+  console.log(
+    `${resume ? "Resuming" : "Building"} pinned QPDF WASM sources with native Emscripten ${EMSCRIPTEN_VERSION}`,
+  );
+  console.log(`${resume ? "Verified recovery" : "Clean audit"} workspace: ${workspace}`);
+  try {
+    await buildNativeArtifacts(toolchain, artifactDirectory, { resume });
+    const descriptions = await stage("hash generated artefacts", () =>
+      describeArtifacts(artifactDirectory),
+    );
+    await stage("Chromium worker encrypt/decrypt gate", () => runBrowserSmoke(artifactDirectory));
+
+    await stage("publish gated static artefacts", async () => {
+      await mkdir(staticAssetDirectory, { recursive: true });
+      for (const { file } of descriptions) {
+        await copyFile(path.join(artifactDirectory, file), path.join(staticAssetDirectory, file));
+      }
+    });
+
+    console.log("QPDF artefacts copied after the worker gate passed:");
+    console.log(JSON.stringify(descriptions, null, 2));
+  } catch (error) {
+    console.error(`Build workspace preserved for audit: ${workspace}`);
+    throw error;
+  }
+}
+
+async function main() {
+  const unknownArguments = [...cliArguments].filter((argument) => !supportedArguments.has(argument));
+  if (unknownArguments.length > 0) {
+    throw new Error(`Unknown option(s): ${unknownArguments.join(", ")}\n\n${usage}`);
+  }
+  if (helpOnly) {
+    process.stdout.write(usage);
+    return;
+  }
+  if (resumeBuild && smokeOnly) {
+    throw new Error("--resume and --smoke-only cannot be used together.");
+  }
+  if (smokeOnly) {
+    const descriptions = await stage("hash committed artefacts", () =>
+      describeArtifacts(staticAssetDirectory),
+    );
+    await stage("Chromium worker encrypt/decrypt gate", () =>
+      runBrowserSmoke(staticAssetDirectory),
+    );
+    console.log("Existing QPDF artefacts:");
+    console.log(JSON.stringify(descriptions, null, 2));
+    return;
+  }
+
+  await build({ resume: resumeBuild });
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

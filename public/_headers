@@ -1,0 +1,116 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(self), microphone=()
+
+/
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/en/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/en
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/zh-hant/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/zh-hant
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/zh-hans/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/zh-hans
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/es/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/es
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/pt-br/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/pt-br
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/fr/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/fr
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/de/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/de
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/ja/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/ja
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/ko/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/ko
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/ru/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/ru
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/id/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/id
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/vi/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/vi
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/fil/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/fil
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/languages/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/languages
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/tools/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/tools
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/open-source-licences/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/open-source-licences
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/open-source-licences/
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/_app/immutable/*
+  Cache-Control: public, max-age=31536000, immutable

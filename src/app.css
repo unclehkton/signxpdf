@@ -1,0 +1,236 @@
+:root {
+  /* Surface */
+  --bg: #f6f4ec;
+  --surface: #ffffff;
+  --surface-2: #fbfaf4;
+  --paper: #fefdf8;
+
+  /* Ink */
+  --fg: #0c1f17;
+  --ink: #0c1f17;
+  --muted: #5b665f;
+  --soft: #8a958e;
+
+  /* Brand — dark forest green */
+  --green-950: #07271b;
+  --green-900: #0d3a29;
+  --green-800: #134a35;
+  --green-700: #1a5d42;
+  --green-600: #226b4d;
+  --green-500: #2c8763;
+  --green-300: #7cbf9c;
+  --green-100: #d8ecdf;
+  --green-50:  #eef6f0;
+
+  --accent: var(--green-800);
+  --accent-hover: var(--green-700);
+
+  /* Lines */
+  --border: #e7e3d4;
+  --border-strong: #d5d0bd;
+
+  /* Status */
+  --danger: #a8321f;
+  --warning: #b1730d;
+
+  /* Shape */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 18px;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px rgba(12, 31, 23, 0.04), 0 1px 1px rgba(12, 31, 23, 0.03);
+  --shadow: 0 4px 14px rgba(12, 31, 23, 0.06), 0 1px 2px rgba(12, 31, 23, 0.04);
+  --shadow-lg: 0 24px 48px -16px rgba(12, 31, 23, 0.18), 0 8px 20px -12px rgba(12, 31, 23, 0.12);
+
+  /* Layout */
+  --max-content: 1080px;
+  --ad-width: 160px;
+  --ad-height: 600px;
+  --page-gutter: clamp(1rem, 6vw, 1.5rem);
+
+  /* Type */
+  --font-sans: 'Segoe UI', ui-sans-serif, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Segoe UI', ui-sans-serif, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Traditional Chinese font stack */
+:lang(zh-Hant) {
+  --font-sans: 'PingFang TC', 'Microsoft JhengHei', 'Hiragino Sans', ui-sans-serif, sans-serif;
+  --font-display: 'PingFang TC', 'Microsoft JhengHei', 'Hiragino Sans', ui-sans-serif, sans-serif;
+}
+
+/* Simplified Chinese font stack */
+:lang(zh-Hans) {
+  --font-sans: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB',
+    'WenQuanYi Micro Hei', 'Noto Sans SC', ui-sans-serif, sans-serif;
+  --font-display: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB',
+    'WenQuanYi Micro Hei', 'Noto Sans SC', ui-sans-serif, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'ss01', 'cv11';
+  letter-spacing: -0.005em;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 0% 0%, rgba(26, 93, 66, 0.04), transparent 45%),
+    radial-gradient(circle at 100% 0%, rgba(13, 58, 41, 0.05), transparent 50%);
+}
+
+button { font: inherit; cursor: pointer; }
+
+a {
+  color: var(--green-800);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s ease, color .15s ease;
+}
+a:hover { color: var(--green-700); border-bottom-color: currentColor; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+}
+
+h3 {
+  font-size: .82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin: 0;
+}
+
+p { margin: 0; }
+
+/* ─── Buttons ─────────────────────────────────────────── */
+.btn-primary,
+.btn-secondary,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: .94rem;
+  letter-spacing: -0.005em;
+  border-radius: 999px;
+  padding: .7rem 1.25rem;
+  border: 1px solid transparent;
+  transition:
+    background-color .18s ease,
+    border-color .18s ease,
+    color .18s ease,
+    transform .18s ease,
+    box-shadow .18s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--green-900);
+  color: #f4f1e6;
+  border-color: var(--green-900);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset, var(--shadow-sm);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--green-700);
+  border-color: var(--green-700);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+.btn-primary:active:not(:disabled) { transform: translateY(0); }
+.btn-primary:disabled {
+  background: var(--green-100);
+  border-color: var(--green-100);
+  color: var(--green-700);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--border-strong);
+}
+.btn-secondary:hover:not(:disabled) {
+  border-color: var(--green-700);
+  color: var(--green-800);
+}
+.btn-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: transparent;
+  padding: .5rem .9rem;
+}
+.btn-ghost:hover:not(:disabled) { background: rgba(13, 58, 41, 0.06); }
+
+/* ─── Forms ───────────────────────────────────────────── */
+input[type="file"] {
+  font-family: var(--font-sans);
+  font-size: .9rem;
+  color: var(--muted);
+  width: 100%;
+}
+input[type="file"]::file-selector-button {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: .88rem;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px dashed var(--border-strong);
+  border-radius: 999px;
+  padding: .55rem 1rem;
+  margin-right: .75rem;
+  cursor: pointer;
+  transition: border-color .15s ease, color .15s ease, background .15s ease;
+}
+input[type="file"]::file-selector-button:hover {
+  border-color: var(--green-700);
+  color: var(--green-800);
+  background: var(--green-50);
+}
+
+::selection { background: var(--green-100); color: var(--green-950); }
+
+/* ─── Utility ─────────────────────────────────────────── */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--green-700);
+}
+
+.serif-accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}

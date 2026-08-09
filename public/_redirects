@@ -1,0 +1,9 @@
+# Cloudflare Pages — real HTTP redirects (numeric status codes).
+# SvelteKit adapter-static also emits meta-refresh pages; Pages applies these
+# edge redirects before the static HTML shells when the rules are valid.
+/               /en/              308
+/index.html     /en/              308
+/tools          /en/merge-pdf/    308
+/tools/         /en/merge-pdf/    308
+/sign-app       /en/sign-pdf/     308
+/sign-app/      /en/sign-pdf/     308
