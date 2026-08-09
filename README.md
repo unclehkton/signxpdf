@@ -73,4 +73,5 @@ Please do not add document contents, filenames, hashes, signature data, credenti
 
 ## License
 
-No license has been selected for this public snapshot yet. Unless a license file is added, publication grants no permission beyond viewing or forking under GitHub's terms. Third-party components remain subject to their own notices in [public/open-source-notices.txt](public/open-source-notices.txt).
+This public snapshot is released under the [MIT License](LICENSE). Copyright (c) 2026 unclehkton. Third-party components remain subject to their own notices in [public/open-source-notices.txt](public/open-source-notices.txt).
+
