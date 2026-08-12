@@ -59,12 +59,7 @@ Performance and file-size observations should be reproduced under stated browser
 
 ## Public source layout
 
-The public source keeps the application, third-party notices, privacy test harness, fixtures, and ordinary unit/build tests. It intentionally omits:
-
-- Internal `bug`, `docs`, and legacy `clip` material
-- Advertising, sponsored, donation, and affiliate components or images
-- Private CI integrations, deployment project identifiers, credentials, and operational reports
-
+The public source keeps the application, third-party notices, privacy test harness, fixtures, and ordinary unit/build tests. 
 The source is available for review and for rerunning relevant tests with non-confidential fixtures. It is a reference implementation, not a promise that every future deployment is identical to this snapshot.
 
 ## Privacy-minded contribution
